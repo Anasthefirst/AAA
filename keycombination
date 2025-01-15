@@ -22,8 +22,9 @@
     <script>
         // Listen for the ";" keypress
         document.addEventListener('keydown', function(event) {
+            console.log("Key pressed: ", event.key); // Log the key pressed
             if (event.key === ';') {
-                // Show the iframe when the ";" key is pressed
+                console.log("Key combination detected! Showing iframe...");
                 document.getElementById('pokiFrame').style.display = 'block';
             }
         });
