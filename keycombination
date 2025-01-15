@@ -3,16 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Key Combination Test</title>
+    <title>Key Combination for Poki</title>
+    <style>
+        #pokiFrame {
+            width: 100%;
+            height: 600px;
+            border: none;
+            display: none; /* Hidden initially */
+        }
+    </style>
 </head>
 <body>
-    <h1>Press ; to Trigger the Action</h1>
+    <h1>Press ";" to view Poki.com</h1>
+    
+    <!-- Hidden iframe -->
+    <iframe id="pokiFrame" src="https://www.poki.com"></iframe>
+
     <script>
+        // Listen for the ";" keypress
         document.addEventListener('keydown', function(event) {
-            console.log("Key pressed: ", event.key); // Log the key pressed
             if (event.key === ';') {
-                console.log("Key combination detected! Redirecting...");
-                window.location.href = "https://www.poki.com"; // Redirect to poki.com
+                // Show the iframe when the ";" key is pressed
+                document.getElementById('pokiFrame').style.display = 'block';
             }
         });
     </script>
