@@ -6,11 +6,11 @@
     <title>Key Combination Test</title>
 </head>
 <body>
-    <h1>Press Ctrl+Shift+` to Trigger the Action</h1>
+    <h1>Press ; to Trigger the Action</h1>
     <script>
         document.addEventListener('keydown', function(event) {
             console.log("Key pressed: ", event.key); // Log the key pressed
-            if (event.ctrlKey && event.shiftKey && event.key === '`') {
+            if (event.key === ';') {
                 console.log("Key combination detected! Redirecting...");
                 window.location.href = "https://www.poki.com"; // Redirect to poki.com
             }
