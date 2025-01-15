@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Key Combination Redirect</title>
+    <title>Key Combination Test</title>
 </head>
 <body>
     <h1>Press Ctrl+Shift+` to Trigger the Action</h1>
     <script>
         document.addEventListener('keydown', function(event) {
+            console.log("Key pressed: ", event.key); // Log the key pressed
             if (event.ctrlKey && event.shiftKey && event.key === '`') {
-                window.location.href = "https://www.poki.com"; // Redirects to poki.com
+                console.log("Key combination detected! Redirecting...");
+                window.location.href = "https://www.poki.com"; // Redirect to poki.com
             }
         });
     </script>
