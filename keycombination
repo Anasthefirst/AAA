@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Key Combination for Poki</title>
+    <title>Key Combination for Itch.io</title>
     <style>
-        #pokiFrame {
+        #itchFrame {
             width: 100%;
             height: 600px;
             border: none;
@@ -14,18 +14,17 @@
     </style>
 </head>
 <body>
-    <h1>Press ";" to view Poki.com</h1>
+    <h1>Press "Ctrl + Shift + Q" to view Itch.io</h1>
     
     <!-- Hidden iframe -->
-    <iframe id="pokiFrame" src="https://www.poki.com"></iframe>
+    <iframe id="itchFrame" src="https://www.itch.io"></iframe>
 
     <script>
-        // Listen for the ";" keypress
+        // Listen for the "Ctrl + Shift + Q" keypress
         document.addEventListener('keydown', function(event) {
-            console.log("Key pressed: ", event.key); // Log the key pressed
-            if (event.key === ';') {
+            if (event.ctrlKey && event.shiftKey && event.key === 'Q') {
                 console.log("Key combination detected! Showing iframe...");
-                document.getElementById('pokiFrame').style.display = 'block';
+                document.getElementById('itchFrame').style.display = 'block';
             }
         });
     </script>
