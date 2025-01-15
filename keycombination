@@ -9,7 +9,7 @@
     <h1>Press ; to Trigger the Action</h1>
     <script>
         document.addEventListener('keydown', function(event) {
-            console.log("Key pressed: "; event.key); // Log the key pressed
+            console.log("Key pressed: ", event.key); // Log the key pressed
             if (event.key === ';') {
                 console.log("Key combination detected! Redirecting...");
                 window.location.href = "https://www.poki.com"; // Redirect to poki.com
